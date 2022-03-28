@@ -1,0 +1,49 @@
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto">
+                <app-title  authAction="Register"></app-title>
+               <div class="login-form">
+                   <div class="row">
+                       <div class="col-md-8 col-12 mx-auto" *ngIf="!isRegistered">
+                           <div class="card">
+                               <div class="card-body">
+                                   <!-- Social Login -->
+                                   <button class="btn  w-100 btn-light"> Signup with Google</button>
+                                   <div class="underline-styling d-flex justify-content-between">
+                                       <hr class="w-50">
+                                       <span class="mx-2 my-auto">or</span>
+                                       <hr class="w-50">
+                                   </div>
+                                    <form  [formGroup]="registerForm">
+                                       <div class="form-group">
+                                           <label for="email">Email Address</label>
+                                           <input type="email" formControlName="email" required class="form-control" id="email" placeholder="example@gmail.com">
+                                       </div>
+                                    <button type="submit" class="w-100 btn-dark btn submit"  (click)="register(registerForm.value)" [disabled]="!registerForm.valid">Sign up  with Email</button>
+                                    </form>
+                                   
+                               </div>
+                           </div>
+                           <div class="register text-white">
+                               <p class="text-center">Already  have an account ?</p>	
+                               <a [routerLink]="['/auth','login']"   class="text-white btn-link btn w-100">Login</a>
+                           </div>
+                       </div>
+
+                       <div class="col-md-8 col-12 mx-auto  text-white" *ngIf="isRegistered">
+                           <h2 class="font-weight-bold text-center">Activation link have been sent</h2>
+                           <div class="row">
+                               <div class="col-10 mx-auto">
+                                <p class="text-center lead">Activation link have been sent to your email address. To start using Pomofocus, please activate your account from the link.</p>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
