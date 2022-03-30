@@ -51,4 +51,4 @@ jobs:
         with:
           app-name: 'pomofocus'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_361FE52EBEED4F42B9ADC652BF1CD7E2 }}
-          package: ./dist/pomofocus
+          package: ./dist/todo
