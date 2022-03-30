@@ -50,6 +50,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'pomofocus'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_361FE52EBEED4F42B9ADC652BF1CD7E2 }}
-          package: .
+          package: ./dist/pomofocus
