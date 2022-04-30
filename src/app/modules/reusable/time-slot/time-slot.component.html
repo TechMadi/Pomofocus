@@ -4,15 +4,15 @@
                 <ng-container ngbNavItem *ngFor="let timeSlot of timeSlots">
                   <a ngbNavLink class="my-auto"  (click)="onTypeChange(timeSlot.type)">{{timeSlot.type}}</a>
                   <ng-template ngbNavContent>
-                    <h1 class="mt-5 display-2  font-weight-bold">{{timeSlot.timer}}:00</h1>
-                    <button class="btn btn-white" (click)="start()" *ngIf="!stopTimer">Start</button>
+                    <h1 class="mt-5 display-2  font-weight-bold">{{timeSlot.timer }} : 00 </h1>
+                    <button class="btn btn-white" (click)="start(timeSlot.timer)" *ngIf="!stopTimer">Start</button>
                     <div class="stop mt-2">
                         <button class="btn  btn-white" (click)="stop()"   *ngIf="stopTimer">Stop</button>
                     </div>
                   </ng-template>
                 </ng-container>
               </nav>
-              
+            
               <div [ngbNavOutlet]="nav" class="mt-2"></div>
         </div>
     </div>

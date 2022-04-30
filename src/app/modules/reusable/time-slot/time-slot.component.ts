@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-time-slot',
   templateUrl: './time-slot.component.html',
@@ -8,10 +9,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   
 })
 export class TimeSlotComponent implements OnInit {
+  
   timeSlots:any[]=[
     {
       type:'Pomodoro',
-      timer:25
+      timer:24
     },
     {
       type:'Short Break',
@@ -38,7 +40,21 @@ export class TimeSlotComponent implements OnInit {
 
 
 
-  start(){
+  start(timeTarget : number){
+    let timeLeft=timeTarget
+
+     for(let i=timeTarget ; i>=0; i--){
+      let newTimeSlot=[... this.timeSlots]
+      let pomodoro=newTimeSlot.find((x)=>x.timer===timeTarget)
+      pomodoro={... pomodoro,timer:i}
+
+      console.log(pomodoro)
+      
+      
+     }
+  
+    
+ 
       this.stopTimer=true
     
   }

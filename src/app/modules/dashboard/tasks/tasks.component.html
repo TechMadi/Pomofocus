@@ -1,0 +1,40 @@
+<div class="conatiner-fluid">
+    <div class="row">
+        <div class="col-8 mx-auto mt-5">
+            <!-- Navbar -->
+
+            <div class="card">
+                <div class="card-header">
+                    <p class="card-title">Tasks</p>
+                    <div ngbDropdown placement="'left" class="d-inline-block">
+                        <button type="button" class="btn" id="dropdownBasic1" ngbDropdownToggle><i class="fa fa-ellipsis-v"></i></button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                          <button ngbDropdownItem> <span> <i class="fa fa-trash-o mr-2"></i> </span>Clear finished  tasks</button>
+                          <button ngbDropdownItem> <span> <i class="fa fa-check mr-2"></i> </span>Clear act pomodoros</button>
+                          <button ngbDropdownItem> <span> <i class="fa fa-plus mr-2"></i> </span>Save as template</button>
+                          <button ngbDropdownItem> <span> <i class="fa fa-trash-o mr-2"></i> </span>Add from  templates</button>
+                        </div>
+                </div>
+               </div>
+
+               <div class="card-body">
+                   <div class="task">
+                       <div class="task-details">
+                      <i type="button" class="fa fa-check-circle fa-2x mr-2" aria-hidden="true" ></i>
+                        <p class="my-auto">Task Name</p>
+                       </div>
+                       <div class="task-actions"> 
+                           <div class="pomodoros">
+                               <span class="çompleted-pomodoros">0</span>/1
+                               <button type="button" class="btn"><i class="fa fa-ellipsis-v"></i></button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="task-description">
+                       <p>Hey testing</p>
+                   </div>
+                   
+               </div>
+        </div>
+    </div>
+</div>

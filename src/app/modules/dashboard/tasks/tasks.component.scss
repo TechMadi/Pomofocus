@@ -1,0 +1,54 @@
+.card{
+    background: none !important;
+    border: 0;
+
+    .card-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom:2px solid rgba(255, 255, 255, 0.2) ;
+        background: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+
+    
+    }
+    .card-body{
+        .task{
+            display: flex;
+            justify-content:space-between;
+            background: var(--white);
+            padding: 1rem;
+            border-left: 1rem solid var(--black);
+            border-radius: 0.3rem;
+            .task-details{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                i{
+                    color: var(--faded);
+                     
+                }  
+            }
+        }
+    }
+}
+
+.dropdown-toggle ,.btn{
+    color: var(--white);
+    width: 10% !important;
+  
+    
+    &:focus{
+        box-shadow: none;
+        background: rgba(255, 255, 255,0.7);
+        color: var(--black);
+    }
+    }
+
+    .dropdown-toggle::after {
+        display:none;
+    }
+
+   
