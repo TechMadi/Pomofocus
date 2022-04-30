@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TitleComponent } from './title/title.component';
 import { TimeSlotComponent } from './time-slot/time-slot.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 
 
 
 @NgModule({
   declarations: [
     TitleComponent,
-    TimeSlotComponent
+    TimeSlotComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { TimeSlotComponent } from './time-slot/time-slot.component';
   ],
   exports:[
     TitleComponent,
-    TimeSlotComponent
+    TimeSlotComponent,
+    NavbarComponent
   ]
 })
 export class ReusableModule { }

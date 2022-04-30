@@ -1,9 +1,17 @@
-<div class="container-fluid landing">
-    <div class="row">
-        <div class="col-md-8 col-sm-12 mx-auto components">
-            <div class="row">
-                <div class="col-md-7 col-12">
-                   <app-time-slot></app-time-slot>
+<div class="container-fluid landing "  [ngClass]="{
+    'bg-red': activeType ==='Pomodoro'|| 'default' ,
+    'bg-teal':activeType ==='Short Break',
+    'bg-purple':activeType === 'Long Break'
+}">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12   components">
+            <div class="row   justify-content-center">
+                <div class="col-md-7 col-12 text-center">
+                  <app-navbar  ></app-navbar>
+                  <app-time-slot (typeSelected)="onColorChange($event)"></app-time-slot>
+                  <p>Tasks</p>
+                   <!-- <app-time-slot></app-time-slot> -->
+    
                 </div>
             </div>
         </div>
