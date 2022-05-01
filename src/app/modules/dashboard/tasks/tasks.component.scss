@@ -1,3 +1,14 @@
+ // common styles
+ .dropdown-toggle::after {
+    display:none;
+}
+
+::placeholder{
+
+}
+
+
+
 .card{
     background: none !important;
     border: 0;
@@ -15,14 +26,14 @@
     
     }
     .card-body{
-        .task{
+        background: var(--white);
+        border-radius: 0.3rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px;
+        .task-body{
             display: flex;
             justify-content:space-between;
-            background: var(--white);
             padding: 1rem;
-            border-left: 1rem solid var(--black);
-            border-radius: 0.3rem;
-            .task-details{
+         .task-details{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -30,16 +41,63 @@
                     color: var(--faded);
                      
                 }  
+            }    
+        }
+
+        .task-description{
+        padding-left: 30px;
+        padding-bottom: 12px;
+        padding-right: 18px;
+        margin: 0.2rem auto;
+        user-select:text;
+        cursor: text;
+            p{
+                padding: 20px 12px;
+                margin: 1rem auto;
+                background-color: var(--cream);
+                border-radius: 0.5rem;
+                    box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px;
+    
+                text-align: left;
+                white-space: pre-wrap;
+                word-break: break-word;
+    
+                
+            }
+           
+        }
+
+        &:hover{
+            border-left: 0.5rem solid var(--faded) ;
+            transition:  border-left 100ms;
+        }
+    }
+
+    .card-footer{
+        background: rgba(255,255,255,0.1);
+        .summary-details{
+            .detail{
+                 display: flex;
+                 justify-content: space-around;
+                 p{
+                      color: var(--white);
+                      font-weight: bold;
+                      span{
+                           font-size: 2rem;
+                           font-weight: normal;
+                           margin: 0 0.2rem ;
+                      }
+                 }
             }
         }
     }
 }
 
-.dropdown-toggle ,.btn{
+.dropdown-toggle{
     color: var(--white);
     width: 10% !important;
   
-    
+
     &:focus{
         box-shadow: none;
         background: rgba(255, 255, 255,0.7);
@@ -47,8 +105,107 @@
     }
     }
 
-    .dropdown-toggle::after {
-        display:none;
+   
+
+    .btn{
+        color: var(--faded);
+        // width: 10% !important;
+      
+    
+        &:focus{
+            box-shadow: none;
+            background: rgba(255, 255, 255,0.7);
+            color: var(--black);
+        }
     }
+
+//Add task button
+    .add-icon{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--white);
+        border: 2px dashed rgba(255, 255, 255, 0.4);
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0.8;
+        margin: 1.2rem 0;
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+    }
+
+    //form
+
+    .add-form{
+        background-color:var(--white);
+        border-radius: 8px;
+        margin-top:0.9rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+        animation: 0.1s ease-in-out 0s 1 normal none running expand;
+        padding: 1.5rem 1rem;
+        text-align: left;
+        
+            form{
+                .form-group {
+                margin-top: 1.5rem !important;
+
+                .form-control{
+                    border: none;
+                    background-color:rgb(239, 239, 239);
+                    &:focus{
+                        box-shadow: none;
+                    }
+                    &::placeholder{
+                        color: rgb(212, 212, 212);
+                    }
+                   
+                }
+                .form-label{
+                    font-weight: bold;
+                }
+                }
+        }
+       
+    }
+    .actions{
+        .form-control{
+            width: 25%;
+        }
+         display: flex;
+         justify-content:start;
+         
+
+         .btn{
+              margin: 0 0.3rem;
+              background-color: var(--white) !important;
+              border: 1px solid rgb(223, 223, 223);
+
+              &:hover{
+                  border: 1px solid var(--black);
+                  color: var(--black);
+              }
+         }
+    }
+
+    .btn-link{
+        color: rgba(66, 66, 66, 0.4);
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+
+    .form-actions{
+        .btn{
+            color: var(--white);
+
+            &:hover{
+                     color: var(--black);
+            }
+        }
+    }
+
+  
 
    

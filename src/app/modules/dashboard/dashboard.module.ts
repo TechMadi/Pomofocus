@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.modules';
 import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReusableModule } from '../reusable/reusable.module';
 import { TasksComponent } from './tasks/tasks.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +19,8 @@ import { TasksComponent } from './tasks/tasks.component';
     DashboardRoutingModule,
     NgbNavModule,
     ReusableModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }

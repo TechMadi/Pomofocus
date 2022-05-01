@@ -1,18 +1,23 @@
 .landing {
     min-height: 100vh;
     .components{
-        position: absolute;
-        top: 5%;
+        margin-top: 3rem;
     }
 }
 
 .bg-red{
     background-color: var(--red);
+    transition: background-color 0.5s ease-in-out 0s;
+    padding-top: env(safe-area-inset-top);
 }
 
 .bg-teal{
     background-color: var(--green) ;
+    transition: background-color 0.5s ease-in-out 0s;
+    padding-top: env(safe-area-inset-top);
 }
 .bg-purple{
     background-color: var(--blue);
+    transition: background-color 0.5s ease-in-out 0s;
+    padding-top: env(safe-area-inset-top);
 }
